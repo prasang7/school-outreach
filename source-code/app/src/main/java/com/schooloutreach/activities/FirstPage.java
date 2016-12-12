@@ -3,6 +3,7 @@ package com.schooloutreach.activities;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ public class FirstPage extends Activity {
 
     AutoCompleteTextView actv_schoolSuggestions;
     Button bt_proceed;
-    String[] schoolNames = {"cow", "dog", "people", "coww"};
+    String[] schoolNames = {"School1", "School2", "School3", "School4"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,9 @@ public class FirstPage extends Activity {
         bt_proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(FirstPage.this, "Proceed", Toast.LENGTH_SHORT).show();
+                if (validSchool()) {
+                    startActivity(new Intent(FirstPage.this, Profile.class));
+                }
             }
         });
     }
@@ -53,6 +56,13 @@ public class FirstPage extends Activity {
     // Get list of schools from server
     void getSchoolsFromServer(){
 
+        /* code to fetch schools name from server!
+        *
+        *
+        *
+        *
+        *
+        */
         setAdapter();
     }
 
@@ -60,6 +70,10 @@ public class FirstPage extends Activity {
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,schoolNames);
         actv_schoolSuggestions.setAdapter(adapter);
         actv_schoolSuggestions.setThreshold(1);
+    }
+
+    boolean validSchool() {
+        return true;
     }
 
     void noInternetConnectionPrompt() {
