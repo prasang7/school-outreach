@@ -18,12 +18,30 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.Profile">
+        <activity android:name=".activities.Profile"
+            android:label="Select Your Profile Type">
             <intent-filter>
                 <action android:name="android.intent.action.PROFILE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activities.LoginTeacher"
+            android:label="Teacher Login">
+            <intent-filter>
+                <action android:name="android.intent.action.LOGINTEACHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.LoginSchool"
+            android:label="School Authority Login">
+            <intent-filter>
+                <action android:name="android.intent.action.LOGINSCHOOL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 

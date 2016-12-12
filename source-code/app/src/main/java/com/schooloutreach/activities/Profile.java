@@ -1,6 +1,7 @@
 package com.schooloutreach.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -56,12 +57,21 @@ public class Profile extends AppCompatActivity {
         bt_proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Profile.this, "" + choice, Toast.LENGTH_SHORT).show();
+                if (choice == 0) {
+                    Toast.makeText(Profile.this, "Please select a profile!", Toast.LENGTH_SHORT).show();
+                }
+                else if (choice == 1) {
+                    startActivity(new Intent(Profile.this, LoginSchool.class));
+                }
+                else if (choice == 2) {
+                    startActivity(new Intent(Profile.this, LoginTeacher.class));
+                }
+                else if(choice == 3) {
+
+                }
             }
         });
-
     }
-
 
     void init() {
         setContentView(R.layout.activity_profile);
