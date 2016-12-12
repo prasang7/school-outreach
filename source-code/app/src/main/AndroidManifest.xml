@@ -17,7 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activities.Profile"
             android:label="Select Your Profile Type">
             <intent-filter>
@@ -25,7 +24,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activities.LoginTeacher"
             android:label="Teacher Login">
             <intent-filter>
@@ -33,7 +31,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activities.LoginSchool"
             android:label="School Authority Login">
             <intent-filter>
@@ -41,8 +38,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".activities.MainSchool"
+            android:label="School Authority Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINSCHOOL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainTeacher"
+            android:label="School Authority Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINTEACHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainStudent"
+            android:label="School Authority Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINSTUDENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
-
 </manifest>

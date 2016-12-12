@@ -39,7 +39,8 @@
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:layout_gravity="right"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:id="@+id/bt_loginSchool_login"/>
 
     </LinearLayout>
 
